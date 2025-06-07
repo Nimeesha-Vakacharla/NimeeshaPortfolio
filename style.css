@@ -1,10 +1,17 @@
 :root {
-    --primary-color: #b8c1ec; /* Soft Indigo */
-    --secondary-color: #7bdff2; /* Bright Cyan */
-    --accent-color: #a3cffa; /* Light Blue */
-    --background-color: #0a1a2e; /* Deep Navy */
-    --text-color: #d9e1e8; /* Light Gray */
-    --node-color: #c9e4f5; /* Pale Blue */
+    --primary-color: #6b728e; /* Slate Blue */
+    --secondary-color: #4cc9f0; /* Vibrant Cyan */
+    --accent-color: #f9c74f; /* Golden Yellow */
+    --background-color: #121212; /* Dark Charcoal */
+    --text-color: #e0e0e0; /* Light Gray */
+    --node-color: #90e0ef; /* Light Cyan */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
 }
 
 #letsconnect {
@@ -12,8 +19,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 70vh;
-    background-color: var(--background-color);
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--background-color), var(--primary-color));
     color: var(--text-color);
 }
 
@@ -21,27 +28,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 0;
+    padding: 2rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 40px;
-    margin-bottom: 2.5rem;
+    gap: 30px;
+    margin-bottom: 2rem;
 }
 
 .contact-icon {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
 }
 
 .contact-link {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -50,81 +61,68 @@
     color: var(--secondary-color);
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
 .btn-outline-primary {
     background-color: transparent;
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
-    border-radius: 5px;
-    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    padding: 0.6rem 1.8rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
-    display: inline-block;
     transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
     background-color: var(--secondary-color);
     color: var(--background-color);
-    border: 2px solid var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.navbar .nav-link {
-    color: var(--text-color) !important;
-}
-
-.navbar .nav-link.active {
-    background-color: var(--secondary-color);
-    color: var(--background-color) !important;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-    background-color: var(--secondary-color);
-    color: var(--background-color) !important;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    transition: all 0.4s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
-    color: var(--primary-color);
     transition: all 0.3s ease;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
 }
 
 .navbar-scrolled {
     background-color: var(--primary-color) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 0;
+}
+
+.navbar .nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    background-color: var(--secondary-color);
     color: var(--background-color) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
+    border-radius: 10px;
 }
 
 .nav-link-scrolled {
     color: var(--background-color) !important;
-    transition: color 0.3s ease-in-out;
 }
 
 .display-1 {
-    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-color);
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .myheadings {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 #home {
-    background: var(--background-color);
+    background: linear-gradient(180deg, var(--background-color), var(--primary-color));
     color: var(--text-color);
     position: relative;
     overflow: hidden;
@@ -139,128 +137,119 @@ body {
 }
 
 #home h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 200;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .memoji-image {
-    width: 140px;
-    height: 180px;
-    border: none;
-    transition: transform 0.3s ease;
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
 }
 
 .memoji-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--background-color);
-    border-color: var(--primary-color);
     border: none;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: none;
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #skills {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding: 5rem 0;
+    background: var(--background-color);
+    padding: 4rem 0;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: 12px;
+    margin-bottom: 1.2rem;
 }
 
 .card-logo {
-    width: 40px;
+    width: 45px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .card-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--background-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin: 0;
-    white-space: nowrap;
 }
 
 .card {
     background-color: var(--text-color) !important;
     color: var(--background-color) !important;
     border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .social-links a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
     color: var(--accent-color) !important;
-    transform: translateY(-3px);
-}
-
-.img-fluid {
-    width: 85%;
-}
-
-.card-text {
-    font-size: 12px;
+    transform: scale(1.2);
 }
 
 footer {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    background-color: var(--primary-color);
 }
 
 footer .myheadings {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-footer .social-links {
-    margin-top: 0rem !important;
+    font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
     #home h1 {
+        font-size: 2.2rem;
+    }
+    .display-1 {
         font-size: 2.5rem;
     }
+    .card-text {
+        font-size: 0.85rem;
+    }
     #letsconnect .container {
-        padding-left: 0;
+        padding: 1rem;
     }
 }
 
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
 
 .float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
