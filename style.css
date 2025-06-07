@@ -1,0 +1,266 @@
+:root {
+    --primary-color: #b8c1ec; /* Soft Indigo */
+    --secondary-color: #7bdff2; /* Bright Cyan */
+    --accent-color: #a3cffa; /* Light Blue */
+    --background-color: #0a1a2e; /* Deep Navy */
+    --text-color: #d9e1e8; /* Light Gray */
+    --node-color: #c9e4f5; /* Pale Blue */
+}
+
+#letsconnect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#letsconnect .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 2.5rem;
+}
+
+.contact-icon {
+    font-size: 2.4rem;
+    color: var(--accent-color);
+}
+
+.contact-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border: 2px solid var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-link {
+    color: var(--text-color) !important;
+}
+
+.navbar .nav-link.active {
+    background-color: var(--secondary-color);
+    color: var(--background-color) !important;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color) !important;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s ease;
+}
+
+.navbar {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar-scrolled {
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.nav-link-scrolled {
+    color: var(--background-color) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.display-1 {
+    color: var(--primary-color);
+}
+
+.myheadings {
+    color: var(--primary-color);
+}
+
+#home {
+    background: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#home h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 200;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.memoji-image {
+    width: 140px;
+    height: 180px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.memoji-image:hover {
+    transform: scale(1.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+#skills {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 5rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.card-logo {
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: var(--text-color) !important;
+    color: var(--background-color) !important;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-3px);
+}
+
+.img-fluid {
+    width: 85%;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+footer {
+    padding: 1rem 0;
+}
+
+footer .myheadings {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer .social-links {
+    margin-top: 0rem !important;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    #letsconnect .container {
+        padding-left: 0;
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
