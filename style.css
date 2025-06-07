@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #6b728e; /* Slate Blue */
-    --secondary-color: #4cc9f0; /* Vibrant Cyan */
-    --accent-color: #f9c74f; /* Golden Yellow */
-    --background-color: #121212; /* Dark Charcoal */
-    --text-color: #e0e0e0; /* Light Gray */
-    --node-color: #90e0ef; /* Light Cyan */
+    --primary-color: #6b728e;
+    --secondary-color: #4cc9f0;
+    --accent-color: #f9c74f;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --node-color: #90e0ef;
 }
 
 body {
@@ -142,8 +142,8 @@ body {
 }
 
 .memoji-image {
-    width: 120px;
-    height: 160px;
+    width: 250px;
+    height: 300px;
     border-radius: 10px;
     transition: transform 0.4s ease;
 }
