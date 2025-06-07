@@ -43,42 +43,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 60, density: { enable: true, value_area: 1000 } },
-            color: { value: var(--node-color) },
-            shape: { type: "circle", stroke: { width: 0, color: var(--node-color) } },
-            opacity: { value: 0.6, random: true },
-            size: { value: 4, random: true },
-            line_linked: {
-                enable: true,
-                distance: 120,
-                color: var(--node-color),
-                opacity: 0.5,
-                width: 1.5
+    if (document.getElementById('particles-js')) {
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 1000 } },
+                color: { value: var(--node-color) },
+                shape: { type: "circle", stroke: { width: 0, color: var(--node-color) } },
+                opacity: { value: 0.6, random: true },
+                size: { value: 4, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: var(--node-color),
+                    opacity: 0.5,
+                    width: 1.5
+                },
+                move: {
+                    enable: true,
+                    speed: 4,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
             },
-            move: {
-                enable: true,
-                speed: 4,
-                direction: "none",
-                random: true,
-                straight: false,
-                out_mode: "out",
-                bounce: false
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { enable: true, mode: "grab" },
-                onclick: { enable: true, mode: "push" },
-                resize: true
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 300, line_linked: { opacity: 0.7 } },
+                    push: { particles_nb: 3 }
+                }
             },
-            modes: {
-                grab: { distance: 300, line_linked: { opacity: 0.7 } },
-                push: { particles_nb: 3 }
-            }
-        },
-        retina_detect: true
-    });
+            retina_detect: true
+        });
+    } else {
+        console.log("Particles.js container not found.");
+    }
 });
